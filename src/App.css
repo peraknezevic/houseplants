@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+ul,
+ol {
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+@media screen and (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+:root {
+  --base-size: 18px;
+  --default-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+
+  --p: var(--base-size);
+  --h1: calc(var(--h2) * var(--type-scale));
+  --logo: calc(var(--h1) * var(--type-scale));
+
+  --cl-green-light: #2e5214;
+  --cl-green: #19322f;
+  --cl-pink: #fef5fa;
+  --cl-pink-darker: #dfc5cb;
+  --cl-pink-darker: #e8d6da;
+  --cl-white: #fff;
+}
+body {
+  background: var(--cl-pink);
+  font-family: var(--default-font);
+  font-size: var(--base-size);
+  line-height: 1.5em;
+  font-weight: 400;
+  color: var(--cl-green);
+  scroll-behavior: smooth;
+  text-align: left;
+  margin: 0 auto;
+}
+
+/* TITLES */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  color: var(--cl-green);
+}
+
+.logo {
+  font-size: var(--logo);
+  line-height: 1em;
+}
+
+h1 {
+  font-size: var(--h1);
+  line-height: 1em;
+}
+
+p {
+  font-size: var(--p);
+  line-height: 1.5em;
+}
+
+small,
+time,
+figcaption {
+  font-size: var(--small);
+}
+
+.App {
+  margin: 0 auto;
+  padding: 10rem;
+}
