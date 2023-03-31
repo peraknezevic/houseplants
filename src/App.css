@@ -26,7 +26,12 @@ img {
   --default-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 
+  --type-scale: 1.125;
+
+  --small: calc(var(--base-size) / var(--type-scale));
   --p: var(--base-size);
+  --h3: calc(var(--p) * var(--type-scale));
+  --h2: calc(var(--h3) * var(--type-scale));
   --h1: calc(var(--h2) * var(--type-scale));
   --logo: calc(var(--h1) * var(--type-scale));
 
@@ -60,15 +65,21 @@ h6 {
   font-weight: 700;
   color: var(--cl-green);
 }
-
 .logo {
   font-size: var(--logo);
   line-height: 1em;
+  font-weight: 900;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.logo a {
+  text-decoration: none;
 }
 
 h1 {
   font-size: var(--h1);
-  line-height: 1em;
+  line-height: 1.5em;
 }
 
 p {
@@ -82,7 +93,18 @@ figcaption {
   font-size: var(--small);
 }
 
+a {
+  color: var(--cl-green);
+  text-decoration: underline;
+}
+
 .App {
   margin: 0 auto;
   padding: 10rem;
+}
+
+.socialLinks a {
+  display: inline-block;
+  padding: 0 0.25rem;
+  margin: 0.25rem;
 }
